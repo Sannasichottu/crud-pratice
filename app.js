@@ -13,16 +13,14 @@ app.use("/contact",router)
 
 
 //mongoose-connected
-mongoose.connect("mongodb+srv://dhojay:dhojay@cluster0.ije4k7o.mongodb.net/?retryWrites=true&w=majority",{
-    useNewUrlParser:true, useUnifiedTopology:true
-},(err) => {
+mongoose.connect("mongodb+srv://dhojay:dhojay@cluster0.ebuwxab.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true},(err)=>{
     if(!err){
-        console.log("Db Connected")
-    }else{
+        console.log("I'm connected to database")
+    }
+    else{
         console.log(err)
     }
 })
-
 
 
 /*

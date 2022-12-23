@@ -8,7 +8,7 @@ const User = require("./userSchema");
 //create = post
 
 router.post("/create",async(req,res)=> {
-    res.send(req.body)
+
     var data = new User({
         firstname : req.body.firstname,
         lastname:req.body.lastname,
@@ -20,6 +20,7 @@ router.post("/create",async(req,res)=> {
     res.json(data)
 });
 
+/*
 //Read = get all
 
 router.get("/",async(req,res)=>{
@@ -47,6 +48,6 @@ router.delete("/delete/:id", async(req,res)=>{
     var delData = await User.findByIdAndRemove({_id:req.params.id}).then(()=>{
         res.json("User Delete")
     })
-})
+})*/
 
 module.exports = router;
